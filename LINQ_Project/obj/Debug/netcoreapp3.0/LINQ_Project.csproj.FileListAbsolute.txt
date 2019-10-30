@@ -1,0 +1,11 @@
+D:\EPAM\LINQ_Project\bin\Debug\netcoreapp3.0\LINQ_Project.exe
+D:\EPAM\LINQ_Project\bin\Debug\netcoreapp3.0\LINQ_Project.deps.json
+D:\EPAM\LINQ_Project\bin\Debug\netcoreapp3.0\LINQ_Project.runtimeconfig.json
+D:\EPAM\LINQ_Project\bin\Debug\netcoreapp3.0\LINQ_Project.runtimeconfig.dev.json
+D:\EPAM\LINQ_Project\bin\Debug\netcoreapp3.0\LINQ_Project.dll
+D:\EPAM\LINQ_Project\bin\Debug\netcoreapp3.0\LINQ_Project.pdb
+D:\EPAM\LINQ_Project\obj\Debug\netcoreapp3.0\LINQ_Project.csprojAssemblyReference.cache
+D:\EPAM\LINQ_Project\obj\Debug\netcoreapp3.0\LINQ_Project.AssemblyInfoInputs.cache
+D:\EPAM\LINQ_Project\obj\Debug\netcoreapp3.0\LINQ_Project.AssemblyInfo.cs
+D:\EPAM\LINQ_Project\obj\Debug\netcoreapp3.0\LINQ_Project.dll
+D:\EPAM\LINQ_Project\obj\Debug\netcoreapp3.0\LINQ_Project.pdb
