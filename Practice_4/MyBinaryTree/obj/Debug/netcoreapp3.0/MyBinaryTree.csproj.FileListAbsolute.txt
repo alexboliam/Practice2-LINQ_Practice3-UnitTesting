@@ -1,0 +1,11 @@
+D:\EPAM\Practice_2\MyBinaryTree\bin\Debug\netcoreapp3.0\MyBinaryTree.exe
+D:\EPAM\Practice_2\MyBinaryTree\bin\Debug\netcoreapp3.0\MyBinaryTree.deps.json
+D:\EPAM\Practice_2\MyBinaryTree\bin\Debug\netcoreapp3.0\MyBinaryTree.runtimeconfig.json
+D:\EPAM\Practice_2\MyBinaryTree\bin\Debug\netcoreapp3.0\MyBinaryTree.runtimeconfig.dev.json
+D:\EPAM\Practice_2\MyBinaryTree\bin\Debug\netcoreapp3.0\MyBinaryTree.dll
+D:\EPAM\Practice_2\MyBinaryTree\bin\Debug\netcoreapp3.0\MyBinaryTree.pdb
+D:\EPAM\Practice_2\MyBinaryTree\obj\Debug\netcoreapp3.0\MyBinaryTree.AssemblyInfoInputs.cache
+D:\EPAM\Practice_2\MyBinaryTree\obj\Debug\netcoreapp3.0\MyBinaryTree.AssemblyInfo.cs
+D:\EPAM\Practice_2\MyBinaryTree\obj\Debug\netcoreapp3.0\MyBinaryTree.dll
+D:\EPAM\Practice_2\MyBinaryTree\obj\Debug\netcoreapp3.0\MyBinaryTree.pdb
+D:\EPAM\Practice_2\MyBinaryTree\obj\Debug\netcoreapp3.0\MyBinaryTree.csprojAssemblyReference.cache
