@@ -129,14 +129,14 @@ namespace MyBinaryTree
 
             return minv;
         }
-        public void Traverse(Node<T> Root)
-        {
-            if (Root == null)
-                return;
-            Traverse(Root.Left);
-            Console.Write(Root.Data + " ");
-            Traverse(Root.Right);
-        }
+        //public void Traverse(Node<T> Root)
+        //{
+        //    if (Root == null)
+        //        return;
+        //    Traverse(Root.Left);
+        //    //Console.Write(Root.Data + " ");
+        //    Traverse(Root.Right);
+        //}
         #endregion
         public IEnumerator<T> GetEnumerator()
         {
