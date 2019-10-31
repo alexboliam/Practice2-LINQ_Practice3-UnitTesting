@@ -103,7 +103,10 @@ namespace MyBinaryTree
             return parent;
 
         }
-        public Node<T> Find(T Data) => this.Find(Data, this.Root);
+        public Node<T> Find(T Data)
+        {
+            return this.Find(Data, this.Root);
+        }
         private Node<T> Find(T Data, Node<T> parent)
         {
             if (parent == null)
@@ -140,6 +143,8 @@ namespace MyBinaryTree
         #endregion
         public IEnumerator<T> GetEnumerator()
         {
+            if (Root == null) yield break;
+
             if (Root.Left != null)
             {
                 foreach (var v in Root.Left)
@@ -160,23 +165,7 @@ namespace MyBinaryTree
         }
         IEnumerator IEnumerable.GetEnumerator()
         {
-            if (Root.Left != null)
-            {
-                foreach (var v in Root.Left)
-                {
-                    yield return v;
-                }
-            }
-
-            yield return Root.Data;
-
-            if (Root.Right != null)
-            {
-                foreach (var v in Root.Right)
-                {
-                    yield return v;
-                }
-            }
+            return this.GetEnumerator();
         }
     }
 }

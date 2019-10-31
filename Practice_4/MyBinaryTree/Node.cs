@@ -40,23 +40,7 @@ namespace MyBinaryTree
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            if (Left != null)
-            {
-                foreach (var v in Left)
-                {
-                    yield return v;
-                }
-            }
-
-            yield return Data;
-
-            if (Right != null)
-            {
-                foreach (var v in Right)
-                {
-                    yield return v;
-                }
-            }
+            return this.GetEnumerator();
         }
     }
 }
