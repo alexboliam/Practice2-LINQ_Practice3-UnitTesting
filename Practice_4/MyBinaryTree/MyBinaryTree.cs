@@ -17,15 +17,6 @@ namespace MyBinaryTree
         #endregion
 
         #region Methods
-        //public void Insert(T Data) => this.Insert(this.Root, Data);
-        //private Node<T> Insert(Node<T> node, T Data)
-        //{
-        //    if (node == null)
-        //        return new Node<T>(Data);
-        //    else if (Data.CompareTo(node.Data) == -1)
-        //        return Insert(node.Left, Data);
-        //    else return Insert(node.Right, Data);
-        //}
         public void Insert(T Data)
         {
             Node<T> before = null, after = this.Root;
@@ -54,32 +45,59 @@ namespace MyBinaryTree
             {
                 before.Right = newNode;
             }
-            OnInsert(this, new MyTreeEventArgs<T>(newNode.Data));
+            OnInsert?.Invoke(this, new MyTreeEventArgs<T>(newNode.Data));
         }
         public void Remove(T Data)
         {
             this.Remove(this.Root, Data);
-            OnRemove(this, new MyTreeEventArgs<T>(Data));
+            OnRemove?.Invoke(this, new MyTreeEventArgs<T>(Data));
         }
         private Node<T> Remove(Node<T> parent, T Data)
         {
             if (parent == null)
                 return parent;
-
-            if (Data.CompareTo(parent.Data) == -1)
-                parent.Left = Remove(parent.Left, Data);
-            else if (Data.CompareTo(parent.Data) == 1)
-                parent.Right = Remove(parent.Right, Data);
+            if(parent == this.Root && Data.Equals(this.Root.Data))
+            {
+                if (this.Root.Left == null && this.Root.Right == null)
+                {
+                    this.Root = null;
+                    return this.Root;
+                }
+                else if (this.Root.Left == null)
+                {
+                    Node<T> temp = this.Root;
+                    this.Root = this.Root.Right;
+                    temp = null;
+                }
+                else if (this.Root.Right == null)
+                {
+                    Node<T> temp = this.Root;
+                    this.Root = this.Root.Left;
+                    temp = null;
+                }
+                else
+                {
+                    this.Root.Data = MinValue(parent.Right);
+                    this.Root.Right = Remove(parent.Right, parent.Data);
+                }
+            }
             else
             {
-                if (parent.Left == null)
-                    return parent.Right;
-                else if (parent.Right == null)
-                    return parent.Left;
+                if (Data.CompareTo(parent.Data) == -1)
+                    parent.Left = Remove(parent.Left, Data);
+                else if (Data.CompareTo(parent.Data) == 1)
+                    parent.Right = Remove(parent.Right, Data);
+                else
+                {
+                    if (parent.Left == null)
+                        return parent.Right;
+                    else if (parent.Right == null)
+                        return parent.Left;
 
 
-                parent.Data = MinValue(parent.Right);
-                parent.Right = Remove(parent.Right, parent.Data);
+                    parent.Data = MinValue(parent.Right);
+                    parent.Right = Remove(parent.Right, parent.Data);
+                }
             }
 
             return parent;
@@ -88,16 +106,16 @@ namespace MyBinaryTree
         public Node<T> Find(T Data) => this.Find(Data, this.Root);
         private Node<T> Find(T Data, Node<T> parent)
         {
-            if (parent != null)
-            {
-                if (Data.CompareTo(parent.Data) == 0)
-                    return parent;
-                if (Data.CompareTo(parent.Data) == -1)
-                    return Find(Data, parent.Left);
-                if (Data.CompareTo(parent.Data) == 1)
-                    return Find(Data, parent.Right);
-            }
-            return null;
+            if (parent == null)
+                return null;
+            
+            
+            if (Data.CompareTo(parent.Data) == -1)
+                return Find(Data, parent.Left);
+            else if (Data.CompareTo(parent.Data) == 1)
+                return Find(Data, parent.Right);
+            else
+                return parent;
         }
         private T MinValue(Node<T> node)
         {

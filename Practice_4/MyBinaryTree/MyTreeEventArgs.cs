@@ -8,6 +8,7 @@ namespace MyBinaryTree
     {
         public T Value { get; set; }
 
+        public MyTreeEventArgs() { Value = default(T); }
         public MyTreeEventArgs(T Value)
         {
             this.Value = Value;
