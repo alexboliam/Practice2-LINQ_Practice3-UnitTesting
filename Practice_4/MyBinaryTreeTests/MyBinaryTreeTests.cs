@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 using MyBinaryTree;
+using System.Collections;
 
 namespace MyBinaryTreeTests
 {
@@ -140,5 +141,57 @@ namespace MyBinaryTreeTests
             Assert.Equal(second, res);
         }
 
+        [Theory]
+        [InlineData(1, 2, 3, 4, 5, 6)]
+        [InlineData(4, 1, 3, 6, 5, 4)]
+        [InlineData(7, 8, 3, 4, 9, 5)]
+        [InlineData(9, 8, 7, 6, 5, 4)]
+        public void GetEnumerator_CopyTreeToListWithForEach_TreeAndListAreSimilarByValues(int i1, int i2, int i3, int i4, int i5, int i6)
+        {
+            //Arrange
+            MyBinaryTree<int> tree = new MyBinaryTree<int>();
+
+            List<int> l = new List<int>() { i1, i2, i3, i4, i5, i6 };
+            foreach (var item in l)
+            {
+                tree.Insert(item);
+            }
+            l.Sort();
+            List<int> res = new List<int>();
+            //Act
+            foreach (var item in tree)
+            {
+                res.Add(item);
+            }
+            //Assert
+            Assert.Equal(l, res);
+        }
+        [Fact]
+        public void GetEnumerator_GetEnumeratorFromForEach_IfTreeIsEmptySkipForEach()
+        {
+            //Arrange
+            MyBinaryTree<int> tree = new MyBinaryTree<int>();
+            bool check = true;
+            //Act
+            foreach (var item in tree)
+            {
+                check = false;
+            }
+            //Assert
+            Assert.True(check);
+        }
+        [Fact]
+        public void GetEnumerator_GetNonGenericEnumeratorForTree_NonGenericEnumeratorIsNotNull()
+        {
+            //Arrange
+            MyBinaryTree<int> tree = new MyBinaryTree<int>();
+            tree.Insert(10);
+            tree.Insert(15);
+            tree.Insert(1);
+            //Act
+            IEnumerator result = ((IEnumerable)tree).GetEnumerator();
+            //Assert
+            Assert.NotNull(result);
+        }
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using MyBinaryTree;
+using System.Collections;
 
 namespace MyBinaryTreeTests
 {
@@ -41,6 +42,17 @@ namespace MyBinaryTreeTests
             var enumer = node.GetEnumerator();
             //Assert
             Assert.NotNull(enumer);
+        }
+
+        [Fact]
+        public void GetEnumerator_GetNonGenericEnumeratorForNode_NonGenericEnumeratorIsNotNull()
+        {
+            //Arrange
+            Node<int> node = new Node<int>();
+            //Act
+            IEnumerator result = ((IEnumerable)node).GetEnumerator();
+            //Assert
+            Assert.NotNull(result);
         }
     }
 }
