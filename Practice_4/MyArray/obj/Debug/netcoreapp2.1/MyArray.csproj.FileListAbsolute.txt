@@ -1,0 +1,10 @@
+D:\EPAM\Practice_4\MyArray\bin\Debug\netcoreapp2.1\MyArray.deps.json
+D:\EPAM\Practice_4\MyArray\bin\Debug\netcoreapp2.1\MyArray.runtimeconfig.json
+D:\EPAM\Practice_4\MyArray\bin\Debug\netcoreapp2.1\MyArray.runtimeconfig.dev.json
+D:\EPAM\Practice_4\MyArray\bin\Debug\netcoreapp2.1\MyArray.dll
+D:\EPAM\Practice_4\MyArray\bin\Debug\netcoreapp2.1\MyArray.pdb
+D:\EPAM\Practice_4\MyArray\obj\Debug\netcoreapp2.1\MyArray.csprojAssemblyReference.cache
+D:\EPAM\Practice_4\MyArray\obj\Debug\netcoreapp2.1\MyArray.AssemblyInfoInputs.cache
+D:\EPAM\Practice_4\MyArray\obj\Debug\netcoreapp2.1\MyArray.AssemblyInfo.cs
+D:\EPAM\Practice_4\MyArray\obj\Debug\netcoreapp2.1\MyArray.dll
+D:\EPAM\Practice_4\MyArray\obj\Debug\netcoreapp2.1\MyArray.pdb
