@@ -1,5 +1,5 @@
-Epam task3-4:
+Epam task2,4:
 
-3. LINQProject - several tasks for training linq
+2. LINQProject - several tasks for training linq - TASK 2 LINQ
 
-4. Practice4 - MyBinaryTree and MyArray from task2 with unit testing projects
+4. Practice4 - MyBinaryTree and MyArray from task2 with unit testing projects - TASK 4 
