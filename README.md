@@ -1,4 +1,4 @@
-Epam task3:
+Epam task3-4:
 
 3.1 LINQProject - several tasks for training linq
 
